@@ -9,6 +9,7 @@
 		"format": "prettier . --write"
 	},
 	"dependencies": {
+		"dayjs": "^1.11.2",
 		"socket.io-client": "^4.5.0",
 		"vue": "^3.2.25",
 		"vue-3-socket.io": "^1.0.5"
