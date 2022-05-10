@@ -37,13 +37,6 @@ router.get('/diceRolls', async (req, res) => {
 });
 
 router.get('/messages', async (req, res) => {
-	const message = await MessageModel.create({
-		user: 'admin',
-		value: 'Hello world'
-	});
-
-	await message.save();
-
 	const limit = req.query.limit ? req.query.limit : 0;
 
 	try {
