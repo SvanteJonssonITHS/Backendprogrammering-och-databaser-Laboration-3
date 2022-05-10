@@ -16,6 +16,9 @@
 				Roll dice
 			</button>
 		</main>
+		<aside class="w-11/12 md:w-1/5 flex flex-col justify-center p-2 order-2 md:order-3">
+			<Chat :username="username" />
+		</aside>
 	</div>
 </template>
 
@@ -24,6 +27,7 @@
 	import Dice from './components/Dice.vue';
 	import LastRoll from './components/LastRoll.vue';
 	import TopList from './components/TopList.vue';
+	import Chat from './components/Chat.vue';
 
 	export default {
 		name: 'App',
@@ -31,7 +35,8 @@
 			UserModal,
 			Dice,
 			LastRoll,
-			TopList
+			TopList,
+			Chat
 		},
 		data() {
 			return {
