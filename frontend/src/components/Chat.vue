@@ -69,7 +69,7 @@
 			},
 			scrollToBottom() {
 				const chat = document.getElementById('chat');
-				chat.scrollTop = chat.scrollHeight + 100;
+				chat.scrollTop = chat.scrollHeight;
 			}
 		},
 		watch: {
