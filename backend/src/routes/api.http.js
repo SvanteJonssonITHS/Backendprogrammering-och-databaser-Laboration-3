@@ -36,6 +36,34 @@ router.get('/diceRolls', async (req, res) => {
 	}
 });
 
+router.get('/rollDice', async (req, res) => {
+	const amount = req.query.amount ? req.query.amount : 1;
+
+	try {
+		const data = { total: 0 };
+
+		for (let i = 1; i <= amount; i++) {
+			const diceRoll = Math.floor(Math.random() * 6) + 1;
+			data[`dice${i}`] = diceRoll;
+			data['total'] += diceRoll;
+		}
+
+		res.status(200).json({
+			success: true,
+			message: 'Dice rolls fetched successfully',
+			error: '',
+			data: [data]
+		});
+	} catch (error) {
+		res.status(500).json({
+			success: false,
+			message: 'Failed to fetch dice rolls',
+			error: error.message || 'Something went wrong retrieving all dice rolls',
+			data: []
+		});
+	}
+});
+
 router.get('/messages', async (req, res) => {
 	const limit = req.query.limit ? req.query.limit : 0;
 
