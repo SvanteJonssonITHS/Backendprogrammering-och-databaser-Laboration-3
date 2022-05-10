@@ -37,7 +37,7 @@ router.get('/diceRolls', async (req, res) => {
 });
 
 router.get('/rollDice', async (req, res) => {
-	const amount = req.query.amount ? req.query.amount : 1;
+	const amount = req.query.amount && req.query.amount > 0 ? req.query.amount : 1;
 
 	try {
 		const data = { total: 0 };
