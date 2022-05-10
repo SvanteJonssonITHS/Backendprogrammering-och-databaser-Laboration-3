@@ -40,11 +40,11 @@ router.get('/rollDice', async (req, res) => {
 	const amount = req.query.amount && req.query.amount > 0 ? req.query.amount : 1;
 
 	try {
-		const data = { total: 0 };
+		const data = { total: 0, dice: [] };
 
 		for (let i = 1; i <= amount; i++) {
 			const diceRoll = Math.floor(Math.random() * 6) + 1;
-			data[`dice${i}`] = diceRoll;
+			data['dice'].push(diceRoll);
 			data['total'] += diceRoll;
 		}
 
