@@ -24,7 +24,6 @@ exports.websocketRoutes = (io) => {
 		});
 		socket.on('diceRoll', async (user, value) => {
 			if (user && value) {
-				console.log('Emit dice roll');
 				// Create new dice roll object
 				const diceRoll = new DiceModel({
 					user: user,

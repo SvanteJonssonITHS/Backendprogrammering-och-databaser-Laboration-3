@@ -53,6 +53,11 @@
 					this.diceArray = response.data[0].dice;
 				}
 			}
+		},
+		watch: {
+			totalValue(newValue) {
+				this.$socket.emit('diceRoll', this.username, newValue);
+			}
 		}
 	};
 </script>
