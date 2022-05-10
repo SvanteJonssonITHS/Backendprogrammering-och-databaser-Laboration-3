@@ -4,7 +4,12 @@
 			<h2 class="text-3xl font-semibold">Set site username</h2>
 			<label class="flex flex-col my-10">
 				<p class="text-lg mb-2">Username:</p>
-				<input type="text" v-model="username" class="border-2 border-neutral-500 p-2 outline-none rounded-md" />
+				<input
+					type="text"
+					maxlength="15"
+					v-model="username"
+					class="border-2 border-neutral-500 p-2 outline-none rounded-md"
+				/>
 			</label>
 			<button
 				@click="submit"

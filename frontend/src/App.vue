@@ -1,5 +1,5 @@
 <template>
-	<UserModal v-if="showModal" @close="showModal = false" />
+	<UserModal v-if="showModal" @close="checkUsername" />
 	<div class="w-screen min-h-screen flex flex-col align-center items-center md:flex-row">
 		<aside class="w-11/12 md:w-1/5 flex flex-col justify-center p-2 order-3 md:order-1">
 			<LastRoll :user="lastRoll.user" :value="lastRoll.value" class="mb-2" />
