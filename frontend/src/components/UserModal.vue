@@ -12,7 +12,6 @@
 				/>
 			</label>
 			<button
-				@click="submit"
 				class="bg-blue-500 hover:bg-blue-400 transition ease duration-150 text-white px-4 py-2 rounded-md float-right"
 			>
 				Set username
