@@ -2,10 +2,10 @@
 	<div class="bg-stone-300 p-2 list-decimal list-inside rounded-md">
 		<h2 class="font-semibold text-lg">Chat</h2>
 		<ul class="my-2 max-h-80 overflow-y-scroll" id="chat">
-			<li v-for="message in messages" :key="message._id">
-				<span class="font-bold">{{ message.user }}</span>
-				<span class="mx-2">{{ message.value }}</span>
-				<span class="text-sm text-stone-500">{{ message.createdAt }}</span>
+			<li v-for="item in messages" :key="item._id">
+				<span class="font-bold">{{ item.user }}</span>
+				<span class="mx-2">{{ item.value }}</span>
+				<span class="text-sm text-stone-500">{{ item.createdAt }}</span>
 			</li>
 		</ul>
 		<form @submit.prevent="submit" class="flex flex-col">
