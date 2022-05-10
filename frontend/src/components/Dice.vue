@@ -47,7 +47,7 @@
 	};
 </script>
 
-<style>
+<style scoped>
 	.dice {
 		@apply bg-red-500 w-32 h-32 rounded-xl grid grid-cols-3 grid-rows-3 place-items-center;
 	}

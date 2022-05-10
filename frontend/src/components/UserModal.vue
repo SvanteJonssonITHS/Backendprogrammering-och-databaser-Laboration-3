@@ -1,6 +1,6 @@
 <template>
 	<div class="absolute top-0 left-0 w-screen min-h-screen bg-black/50 flex">
-		<form @submit.prevent="submit" class="m-auto bg-white bg-black p-10 rounded-md">
+		<form @submit.prevent="submit" class="m-auto bg-white text-black p-10 rounded-md">
 			<h2 class="text-3xl font-semibold">Set site username</h2>
 			<label class="flex flex-col my-10">
 				<p class="text-lg mb-2">Username:</p>
